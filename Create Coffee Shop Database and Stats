@@ -1,0 +1,29 @@
+--Create a coffee shop database
+
+CREATE TABLE cloies_coffeeshop (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, caffeine_level INTEGER, brewing_method TEXT);
+
+INSERT INTO cloies_coffeeshop VALUES (1, "Cortado", 4, 6, "espresso");
+INSERT INTO cloies_coffeeshop VALUES (2, "Vanilla Cold Brew", 6, 8, "cold brewed");
+INSERT INTO cloies_coffeeshop VALUES (3, "Pumpkin Cold Brew", 6, 8, "cold brewed");
+INSERT INTO cloies_coffeeshop VALUES (4, "Medium Roast", 3, 9, "drip machine");
+INSERT INTO cloies_coffeeshop VALUES (5, "Dark Roast", 3, 7, "drip machine");
+INSERT INTO cloies_coffeeshop VALUES (6, "Light Roast", 3, 10, "drip machine");
+INSERT INTO cloies_coffeeshop VALUES (7, "Double Espresso Shot", 2, 7, "espresso");
+INSERT INTO cloies_coffeeshop VALUES (8, "Iced Double Espresso Shot", 2, 7, "espresso");
+INSERT INTO cloies_coffeeshop VALUES (9, "Latte", 5, 7, "espresso");
+INSERT INTO cloies_coffeeshop VALUES (10, "Vanilla Latte", 6, 7, "espresso");
+INSERT INTO cloies_coffeeshop VALUES (11, "Chocolate Latte", 6, 7, "espresso");
+INSERT INTO cloies_coffeeshop VALUES (12, "Maple Latte", 6, 7, "espresso");
+INSERT INTO cloies_coffeeshop VALUES (13, "Cold Brew", 5, 8, "cold brewed");
+INSERT INTO cloies_coffeeshop VALUES (14, "Americano", 5, 8, "espresso");
+INSERT INTO cloies_coffeeshop VALUES (15, "Featured Offering", 4, 9, "chemex");
+
+--display the database ordered by price.
+SELECT * FROM cloies_coffeeshop 
+ORDER BY price;
+
+--what is the average price of items.
+SELECT AVG(price) FROM cloies_coffeeshop
+
+--name the types of brewing methods.
+SELECT brewing_method FROM cloies_coffeeshop
