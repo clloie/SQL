@@ -219,19 +219,19 @@ INSERT INTO countries(name,population,percent_one_year_change,population_change,
 INSERT INTO countries(name,population,percent_one_year_change,population_change,density_per_sq_km,area_sq_km,net_migrants,fertility_rate,median_age,percent_of_world_pop) VALUES ('Seychelles',98347,0.62,608,214,460,-200,2.50,34.00,0);
 INSERT INTO countries(name,population,percent_one_year_change,population_change,density_per_sq_km,area_sq_km,net_migrants,fertility_rate,median_age,percent_of_world_pop) VALUES ('Antigua and Barbuda',97929,0.84,811,223,440,0,2.00,34.00,0);
 
-List the countries in alphabetical order.
+/*List the countries in alphabetical order.*/
 
 SELECT * from countries ORDER BY name ASC;
 
-Find the top 3 countries with the highest density, including population of entire country/territory.
+/*Find the top 3 countries with the highest density, including population of entire country/territory.*/
 
 SELECT name, population, density_per_sq_km FROM countries WHERE population > 100000000 AND density_per_sq_km > 300 ORDER BY density_per_sq_km DESC LIMIT 3;
 
-Find the 15 countries/territories with the highest average age.
+/*Find the 15 countries/territories with the highest average age.*/
 
 SELECT name, median_age FROM countries WHERE median_age >= 43 ORDER BY median_age DESC LIMIT 15;
 
-Find the top 10 countries/territories with the highest fertility rate in the world.
+/*Find the top 10 countries/territories with the highest fertility rate in the world.*/
 
 SELECT name, fertility_rate FROM countries ORDER BY fertility_rate DESC LIMIT 10;
 
