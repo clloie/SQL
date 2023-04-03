@@ -1,4 +1,4 @@
---Create a coffee shop database
+/*--Create a coffee shop database*/
 
 CREATE TABLE cloies_coffeeshop (id INTEGER PRIMARY KEY, name TEXT, price INTEGER, caffeine_level INTEGER, brewing_method TEXT);
 
@@ -18,12 +18,12 @@ INSERT INTO cloies_coffeeshop VALUES (13, "Cold Brew", 5, 8, "cold brewed");
 INSERT INTO cloies_coffeeshop VALUES (14, "Americano", 5, 8, "espresso");
 INSERT INTO cloies_coffeeshop VALUES (15, "Featured Offering", 4, 9, "chemex");
 
---display the database ordered by price.
+/*display the database ordered by price.*/
 SELECT * FROM cloies_coffeeshop 
 ORDER BY price;
 
---what is the average price of items.
+/*what is the average price of items.*/
 SELECT AVG(price) FROM cloies_coffeeshop
 
---name the types of brewing methods.
+/*name the types of brewing methods.*/
 SELECT brewing_method FROM cloies_coffeeshop
